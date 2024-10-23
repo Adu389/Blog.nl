@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Design Journey</title>
+    <meta name="description" content="Welcome to my journey learning web design, including HTML, CSS, and JavaScript.">
+    <meta name="keywords" content="web design, blog, HTML, CSS, JavaScript, learning">
+    <meta name="author" content="Joseph Adu">
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this link is correct -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="blog.html">My Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Services</a></li> <!-- New Services link -->
+        </ul>
+    </nav>
+
+    <h1>Welcome to My Web Design Journey</h1>
+    <p>Hello! I'm Joseph Adu, and this is my blog about learning web design.</p>
+    <p>Check out the <a href="about.html">About Me</a> page to know more.</p>
+    <p><a href="blog.html">Read My Blog</a></p>
+    <p><a href="contact.html">Contact Me</a></p>
+
+    <!-- Adding dynamic content -->
+    <button onclick="addContent()">Add Content</button>
+    <div id="contentArea"></div>
+
+    <!-- Modal window -->
+    <button onclick="showModal()">Show Modal</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>This is a modal window!</p>
+        </div>
+    </div>
+
+    <!-- Animated Button -->
+    <button class="animate-button">Bounce!</button>
+
+    <script>
+        alert("Welcome to My Web Design Journey!");
+        function changeText() {
+            document.getElementById("text").innerHTML = "You clicked the button!";
+        }
+
+        function addContent() {
+            const contentArea = document.getElementById("contentArea");
+            const newContent = document.createElement("p");
+            newContent.textContent = "This is dynamically added content!";
+            contentArea.appendChild(newContent);
+        }
+
+        function showModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
